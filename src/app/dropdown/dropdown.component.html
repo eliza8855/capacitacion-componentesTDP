@@ -1,0 +1,59 @@
+<div class="container-dropdown">
+    <form [formGroup]="form">
+
+
+        <div class="element">
+<!-- DROPDOWN -->
+            <tdp-dropdown
+            label="Meses"
+            width="100%"
+            minWidth="80px"
+            size="sm"
+            [listItems]="listMonths"
+            formControlName="month"
+            [error]="form.value.month.invalid"
+            helperText=""
+            ></tdp-dropdown>
+
+        </div>
+
+        <div class="element">
+            <tdp-textfield
+            label="Precio"
+            width="100%"
+            formControlName="price"
+            >
+            </tdp-textfield>
+        </div>
+    </form>
+</div>
+
+<div> formulario: {{ form.value | json}}</div>
+<div> value de month: {{ form.value.month.value | json}}</div>
+
+<!-- <div class="container-dropdown">
+    <tdp-dropdown 
+    label="Documentos" 
+    width="100%"
+    size="md"
+    ></tdp-dropdown>  
+</div>
+
+<div class="container-dropdown">
+    <tdp-dropdown 
+    label="Documentos" 
+    width="100%"
+    size="lg"
+    ></tdp-dropdown>  
+</div>
+
+<div class="container-dropdown">
+    <tdp-dropdown 
+    label="Documentos" 
+    width="100%"
+    size="xl"
+    ></tdp-dropdown>  
+</div> -->
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

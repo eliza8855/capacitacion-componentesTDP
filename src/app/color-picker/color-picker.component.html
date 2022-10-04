@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+       
+    <tdp-colorpicker
+    #colorPicker 
+    label="Seleccionar color"
+    setColor="#0c3f5a"
+    (tdpOnChange)="obtenerColor($event.detail)"
+    ></tdp-colorpicker>
+
+    <!-- paso 1: Se agrega como componente de Formulario Reactivo -->
+   <!-- formControlName="color" -->
+    <!-- (tdpOnChange)="obtenerColor($event.detail)" -->
+
+
+    <!-- paso 2: lograr que se defina como defecto el valor del atributo color del dataColor - SOLUCION QUE ENCONTRÉ-->
+    <!-- setColor="#0c3f5a" -->
+    <!-- #colorPicker , va en la etiqueta de colorPicker-->
+
+    
+    <tdp-textfield
+    formControlName="name"
+    label="Nombre"
+    >
+    </tdp-textfield>
+
+</form>
+
+<tdp-button class="button-form" color="primary" iconsvgright="home_heavy_20" text="enviar" (tdpOnClick)="sendValues()"></tdp-button>
+
+<span> formulario {{ profileForm.value | json}}</span>
